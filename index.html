@@ -96,7 +96,7 @@
             <thead><tr><th>Service</th><th>When used and information sent</th><th>Provider information</th></tr></thead>
             <tbody>
               <tr><td>Open-Meteo</td><td>Town search sends your search text. Forecast, ensemble and flood-proxy requests send the selected point. Checks may run for saved places in the background.</td><td><a href="https://open-meteo.com/en/terms">Terms and privacy</a></td></tr>
-              <tr><td>OpenStreetMap Foundation (Nominatim)</td><td>When GPS needs a town name, sends the rounded point. The public map-tile service receives the viewed map area when you open Radar.</td><td><a href="https://osmfoundation.org/wiki/Privacy_Policy">Privacy policy</a></td></tr>
+              <tr><td>OpenStreetMap Foundation (Nominatim)</td><td>When GPS needs a town name, sends the rounded point. An explicit wider town or region search sends the search words you type. The public map-tile service receives the viewed map area when you open Radar.</td><td><a href="https://osmfoundation.org/wiki/Privacy_Policy">Privacy policy</a></td></tr>
               <tr><td>Android device geocoder</td><td>If Nominatim cannot name a GPS point, the device's geocoding service may receive it. The operator depends on your Android device and services.</td><td>See your device provider's privacy information.</td></tr>
               <tr><td>BigDataCloud</td><td>Final fallback for naming a newly selected GPS point; receives the rounded point and IP address. Its free service says it uses aggregated GPS/IP pairings to improve IP geolocation.</td><td><a href="https://www.bigdatacloud.com/privacy-and-cookie-policy">Privacy policy</a> · <a href="https://www.bigdatacloud.com/docs/article/why-is-reverse-geocoding-api-free">Free-service explanation</a></td></tr>
               <tr><td>RainViewer</td><td>When you open Radar, receives metadata and radar-tile requests including the selected point. Radar does not run in the background.</td><td><a href="https://www.rainviewer.com/privacy.html">Privacy policy</a></td></tr>
@@ -104,6 +104,7 @@
               <tr><td>US National Weather Service</td><td>For supported US places, requests warnings for the selected point.</td><td><a href="https://www.weather.gov/privacy">Privacy policy</a></td></tr>
               <tr><td>US Geological Survey</td><td>Requests nearby earthquake reports using the selected point.</td><td><a href="https://www.usgs.gov/office-of-the-director/privacy-policies">Privacy policy</a></td></tr>
               <tr><td>GDACS</td><td>Downloads a general disaster event list without your point; the app filters it on your phone.</td><td><a href="https://www.gdacs.org/">Provider website</a></td></tr>
+              <tr><td>Emergency Numbers API</td><td>When an emergency number is not in HorizonCue's offline list, an on-demand request sends only the selected country's two-letter code, not your coordinates. The provider also receives your IP address. Its data is community-compiled and may be inaccurate.</td><td><a href="https://emergencynumberapi.com/docs">API documentation and disclaimer</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -122,6 +123,7 @@
               <tr><td>Provide chosen-place forecasts, alerts, local tasks, notification history and widget information</td><td>Saved town or point, app settings and event data</td><td>Our legitimate interest in providing the safety-information features you request (Article 6(1)(f)). You can remove places or stop notifications.</td></tr>
               <tr><td>Get a fresh GPS fix when you tap GPS and name that location</td><td>GPS point, accuracy and fix time</td><td>Your choice and permission for optional GPS use (Article 6(1)(a)). You can decline, revoke permission and remove the saved GPS place.</td></tr>
               <tr><td>Show radar when requested</td><td>Selected point, map area and network request data</td><td>Our legitimate interest in providing the radar feature you open (Article 6(1)(f)).</td></tr>
+              <tr><td>Look up an emergency number when a country is not in the offline list</td><td>Selected country code and network request data</td><td>Our legitimate interest in providing the information you request (Article 6(1)(f)).</td></tr>
               <tr><td>Respond to feedback, issue reports and privacy requests</td><td>Email address, message and anything you include</td><td>Our legitimate interest in answering you (Article 6(1)(f)); for rights requests, compliance with applicable legal obligations (Article 6(1)(c)).</td></tr>
             </tbody>
           </table>
@@ -135,6 +137,7 @@
           <li><strong>Places, events, tasks and settings:</strong> stored on your phone until you remove them, use <em>Settings → Delete saved app data</em>, or uninstall. A flagged event must be removed separately if you want to keep other app data.</li>
           <li><strong>Notification history:</strong> stored on your phone until cleared, deleted with all saved app data, or uninstalled; the app keeps at most the latest 80 records.</li>
           <li><strong>GPS place-name cache:</strong> reused for up to 24 hours. Old entries may remain in local app storage until all saved app data is deleted or the app is uninstalled.</li>
+          <li><strong>Emergency-number lookup cache:</strong> a country result is reused for up to seven days. Old entries may remain locally until all saved app data is deleted or the app is uninstalled.</li>
           <li><strong>Radar map-tile cache:</strong> base map tiles are reused for up to seven days; expired files may remain in Android's app cache until replaced, Android clears the cache, you clear app storage in Android settings, or you uninstall. The in-app <em>Delete saved app data</em> button does not clear these tile files.</li>
           <li><strong>Ordinary support and feedback email:</strong> if you send us a message, we will delete it within 12 months of the most recent message in the conversation, unless a longer period is required for a legal claim or obligation.</li>
           <li><strong>Privacy-rights correspondence:</strong> kept for up to three years after a request is closed to document our response, then deleted unless a longer legal need applies.</li>
